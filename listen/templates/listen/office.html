@@ -64,13 +64,19 @@
   <p class="mt-1 text-sm text-gray-500">
     Enjoy the sounds of the city
   </p>
-	<ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-12">
-		{% for nature_track in nature_tracks %}
-			<li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
-				<iframe src="https://open.spotify.com/embed/track/{{ nature_track }}" width="300" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-			</li>
-		{% endfor %}
-	</ul>
+        <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-12">
+                {% for nature_track in nature_tracks %}
+                        <li class="col-span-1 bg-white rounded-lg shadow h-80 p-6">
+                                <iframe src="https://open.spotify.com/embed/track/{{ nature_track.id }}" width="300" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <p class="mt-4">Track name<p/>
+        <p class="text-gray-500">{{ nature_track.name }}</p>
+        <p class="mt-4">Artist(s)</p>
+        {% for artist in nature_track.artists %}
+          <p class="text-gray-500">{{ artist.name }}</p>
+        {% endfor %}
+                        </li>
+                {% endfor %}
+        </ul>
 </div>
 
   </div>
