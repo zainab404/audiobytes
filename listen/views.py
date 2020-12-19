@@ -1,3 +1,5 @@
+import requests
+import json
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -10,7 +12,19 @@ def dashboard(request):
       '0ggwBO4x4XWDYHDnCpz3TJ',
       '0Q7oSvv9r8xRxqOJc3uWte'
     ]
-    return render(request, 'listen/dashboard.html', { 'nature_tracks': NATURE_TRACKS })
+    dashboard_tracks = []
+
+    for track in NATURE_TRACKS:
+        url = "https://api.spotify.com/v1/tracks/{}".format(track)
+        response = requests.get(
+          url,
+          headers={
+            "Content-Type":"application/json",
+            "Authorization":"Bearer BQAkoALbVnAioLjVipoUVXDpjIptIU5DX9UVOF749l7HJknLIU7b9whPtjho4h_Y519Nij7sVoW00_mok2K2jOhSypdOs5MHg8xD9w_GVD9s9K_7_khXuWBRnHQsTbKdrzHqkoLWpmgpiCoHbnJRhtmGoeAtrdGGRyv2wFC3OzomQXoeDNi2UxqDdoCZXo6cuLuk1hcoAUXE22VbByA2GGIqpmVbS1sHj4DbqKk6FwguR_eFyVs1K-y7tbxiIg7oc7Ll7itxvRgaYX24tOer69kvbMYmOnlIjbOtEY0"
+          }
+        )
+        dashboard_tracks.append(response.json())
+    return render(request, 'listen/dashboard.html', { 'nature_tracks': dashboard_tracks})
 
 def nature(request):
     NATURE_TRACKS = [
