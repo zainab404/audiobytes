@@ -12,7 +12,7 @@
   <div class="mt-5 flex-grow flex flex-col">
     <nav class="flex-1 px-2 bg-white space-y-1" aria-label="Sidebar">
       <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
-      <a href="/listen/public" class="text-gray-900 group flex items-center px-2 py-2 text-sm font-mediumrounded-md">
+      <a href="/listen/dashboard" class="text-gray-900 group flex items-center px-2 py-2 text-sm font-mediumrounded-md">
         <!-- Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" -->
         <!-- Heroicon name: home -->
         <svg class="text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -21,7 +21,7 @@
         Dashboard
       </a>
 
-      <a href="/listen/nature" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+      <a href="/listen/nature" class="bg-gray-200 text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
         <!-- Heroicon name: users -->
         <svg class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -29,7 +29,7 @@
         Nature
       </a>
 
-      <a href="#" class="bg-gray-100 text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+      <a href="/listen/public" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
         <!-- Heroicon name: folder -->
         <svg class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
@@ -59,10 +59,10 @@
   <div>
 <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6 pt-12">
   <h3 class="text-lg leading-6 font-medium text-gray-900">
-    Public
+    Nature
   </h3>
   <p class="mt-1 text-sm text-gray-500">
-    Enjoy the sounds of the city
+    Set outside and connect with nature
   </p>
 	<ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-12">
 		{% for nature_track in nature_tracks %}
