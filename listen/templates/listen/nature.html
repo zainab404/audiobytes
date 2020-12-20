@@ -4,7 +4,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
-    <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="flex flex-row">
 <div class="flex flex-col border-r border-gray-200 pt-5 pb-4 bg-white overflow-y-auto w-64">
   <div class="flex items-center flex-shrink-0 px-4">
@@ -15,28 +14,22 @@
   </div>
   <div class="mt-5 flex-grow flex flex-col">
     <nav class="flex-1 px-2 bg-white space-y-1" aria-label="Sidebar">
-      <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
       <a href="/listen/dashboard" class="text-gray-900 group flex items-center px-2 py-2 text-sm font-mediumrounded-md">
-        <!-- Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" -->
-        <!-- Heroicon name: home -->
         <img class="w-7 mr-2" src="{% static 'listen/home.png' %}" />
         Dashboard
       </a>
 
       <a href="/listen/nature" class="bg-gray-200 text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-        <!-- Heroicon name: users -->
         <img class="w-7 mr-2" src="{% static 'listen/leaf.png' %}" />
         Nature
       </a>
 
       <a href="/listen/public" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
         <img class="w-7 mr-2" src="{% static 'listen/group.png' %}" />
-        <!-- Heroicon name: folder -->
         Public
       </a>
 
       <a href="/listen/office" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-        <!-- Heroicon name: calendar -->
         <img class="w-7 mr-2" src="{% static 'listen/portfolio.png' %}" />
         Office
       </a>
