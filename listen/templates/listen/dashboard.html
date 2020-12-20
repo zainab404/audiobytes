@@ -1,10 +1,12 @@
 <html>
   {% load static %}
   <head>
+    <title>AudioBytes</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
     <!-- This example requires Tailwind CSS v2.0+ -->
+    
 <div class="flex flex-row">
 <div class="flex flex-col border-r border-gray-200 pt-5 pb-4 bg-white overflow-y-auto w-64">
   <div class="flex items-center flex-shrink-0 px-4">
@@ -46,10 +48,10 @@
   <div>
 <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6 pt-12">
   <h3 class="text-lg leading-6 font-medium text-gray-900">
-    Nature
+    Welcome to your daily dashboard!
   </h3>
   <p class="mt-1 text-sm text-gray-500">
-    Set outside and connect with nature
+    Select from your daily dashboard or click the categories on the left
   </p>
           <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12">
                 {% for nature_track in nature_tracks %}
