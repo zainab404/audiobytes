@@ -6,7 +6,7 @@
   <body>
     <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="flex flex-row">
-<div class="flex flex-col flex-grow border-r border-gray-200 pt-5 pb-4 bg-white overflow-y-auto">
+<div class="flex flex-col border-r border-gray-200 pt-5 pb-4 bg-white overflow-y-auto w-64">
   <div class="flex items-center flex-shrink-0 px-4">
       <a href="/">
         <span class="sr-only">Workflow</span>
@@ -26,7 +26,7 @@
         Dashboard
       </a>
 
-      <a href="/listen/nature" class="bg-gray-200 text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+      <a href="/listen/nature" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
         <!-- Heroicon name: users -->
         <svg class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -34,7 +34,7 @@
         Nature
       </a>
 
-      <a href="/listen/public" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+      <a href="/listen/public" class="bg-gray-200 text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
         <!-- Heroicon name: folder -->
         <svg class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
@@ -69,10 +69,10 @@
   <p class="mt-1 text-sm text-gray-500">
     Set outside and connect with nature
   </p>
-          <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-12">
+          <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12">
                 {% for nature_track in nature_tracks %}
-                        <li class="col-span-1 bg-white rounded-lg shadow h-80 p-6">
-                                <iframe src="https://open.spotify.com/embed/track/{{ nature_track.id }}" width="300" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <li class="col-span-1 bg-white rounded-lg shadow h-80 p-6 w-80">
+                                <iframe src="https://open.spotify.com/embed/track/{{ nature_track.id }}" width="270" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         <p class="mt-4">Track name<p/>
         <p class="text-gray-500">{{ nature_track.name }}</p>
         <p class="mt-4">Artist(s)</p>
