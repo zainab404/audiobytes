@@ -21,5 +21,6 @@ from landing import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index,name='index'),
-    path('feedback/', views.feedback, name='feedback')
+    path('feedback/', views.feedback, name='feedback'),
+    path('listen/', include('listen.urls')),
 ]
